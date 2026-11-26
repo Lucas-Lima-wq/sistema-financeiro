@@ -1,0 +1,337 @@
+
+/* config gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* menu superior */
+.topo {
+    background: #1e3a8a;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.largura {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.topo-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.topo strong {
+    color: white;
+    font-size: 23px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #bfdbfe;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+h2 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* cartoes */
+.caixa {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.caixa.acesso {
+    max-width: 450px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card span {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.card strong {
+    color: #1e3a8a;
+    font-size: 25px;
+}
+
+/* formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: #334155;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #1e293b;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* formulario das receitas e das despesas */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* repetir mensagem */
+.form-grid .campo-recorrente {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.form-grid .campo-recorrente input[type="checkbox"] {
+    appearance: auto;
+    -webkit-appearance: checkbox;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    flex: 0 0 18px;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.form-grid .campo-recorrente label {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* botoes */
+button {
+    padding: 13px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 8px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.alinha {
+    justify-content: flex-end;
+}
+
+/* links */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+.centro {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Mensagem */
+.erro {
+    color: #dc2626;
+    background: #fee2e2;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.sucesso {
+    color: #15803d;
+    background: #dcfce7;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+td {
+    color: #334155;
+}
+
+tr:hover td {
+    background: #f8fafc;
+}
+
+/* paginas de login e as de cadastro */
+.fundo {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* TELAS MENORES */
+@media (max-width: 768px) {
+
+    .topo-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .caixa {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 10px 7px;
+    }
+}
